@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Atelier
 
-## Getting Started
+Atelier is a pastel, sketch-inspired beauty storefront built with Next.js App Router. It includes a full multi-page storefront flow (home, shop, product detail, cart, checkout, about, contact), reusable UI components, and starter API routes for product browsing and order submission.
 
-First, run the development server:
+## Project Highlights
+
+- Hand-crafted visual style with sketch panels, circles, and custom typography treatment
+- Product catalog with categories, best sellers, and new arrivals
+- Dynamic product detail route using slug-based pages
+- Cart and checkout pages for the purchase flow
+- API routes for products and orders under App Router
+- SQL schema included for future PostgreSQL persistence
+
+## Tech Stack
+
+- Next.js 16 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- ESLint 9
+
+## Local Development
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open the app:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Available Scripts
 
-## Learn More
+- `npm run dev` - run development server
+- `npm run build` - create production build
+- `npm run start` - run production server
+- `npm run lint` - run ESLint checks
 
-To learn more about Next.js, take a look at the following resources:
+## API Endpoints
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `GET /api/products` - returns product list from mock data
+- `POST /api/orders` - accepts an order payload and returns a pending order response
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+- `app/` - routes, pages, and API route handlers
+- `components/` - reusable site and UI components
+- `lib/` - domain types, mock data, and API flow examples
+- `database/schema.sql` - relational schema for production backend planning
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Backend Status
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Atelier currently uses mock in-memory data for products and a simulated order acceptance route. The SQL schema is ready for connecting a real PostgreSQL backend in the next phase.
+
+## Notes
+
+- This repository is frontend-first with backend scaffolding in place.
+- Recommended next step: connect API routes to PostgreSQL and persist cart/order data.
